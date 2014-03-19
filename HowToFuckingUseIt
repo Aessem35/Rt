@@ -1,0 +1,21 @@
+  
+   HowToFuckingUseIt for readme in /home/richar_2/RTFinal
+   
+   Made by 
+   Login   <richar_2@epitech.net>
+   
+   Started on  Wed Mar 19 16:11:51 2014 
+   Last update Wed Mar 19 16:17:35 2014 
+  
+
+-git add : ajoute un fichier
+-git commit -m "truc" : rendu local
+-git push : envoi le dernier commit sur le serveur
+-git commit --amend : modifie le message de commit
+-git reset HEAD^ : annule le dernier commit
+-git reset --hard HEAD^ : annule le dernier commit et tous les modifications
+-git checkout : revient comme il etait au dernier commit
+-git reset HEAD -- fichier_a_supprimer : surprime un fichier du commit
+-git pull : télécharge les nouveautés depuis le serveur
+-git log -p :log local afin de savoir ce que vous vous apprêtez à envoyer
+-git revert 6261cc2: crée un git inverse​ 
