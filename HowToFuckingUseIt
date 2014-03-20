@@ -5,7 +5,7 @@
    Login   <richar_2@epitech.net>
    
    Started on  Wed Mar 19 16:11:51 2014 
-   Last update Wed Mar 19 16:17:35 2014 
+   Last update Thu Mar 20 12:04:23 2014 
   
 
 -git add : ajoute un fichier
@@ -19,3 +19,5 @@
 -git pull : télécharge les nouveautés depuis le serveur
 -git log -p :log local afin de savoir ce que vous vous apprêtez à envoyer
 -git revert 6261cc2: crée un git inverse​ 
+
+Pour le YOLO et l'amour de l'art.
