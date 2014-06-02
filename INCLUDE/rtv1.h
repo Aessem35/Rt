@@ -5,7 +5,7 @@
 ** Login   <boutel_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 14:09:53 2014 boutel_a
-** Last update Mon Jun  2 10:23:11 2014 boutel_a
+** Last update Mon Jun  2 15:49:14 2014 sainto_p
 */
 
 
@@ -47,6 +47,24 @@ typedef struct s_color
   int	g;
   int	b;
 }t_color;
+
+typedef struct  s_cone
+{
+  float k[2];
+  float delta;
+  float x;
+  float y;
+  float z;
+  float angle;
+  float rayon;
+} t_cone;
+
+typedef struct s_fcoord
+{
+  float x;
+  float y;
+  float z;
+} t_fcoord;
 
 typedef struct s_int
 {
