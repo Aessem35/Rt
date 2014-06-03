@@ -5,7 +5,7 @@
 ## Login   <boutel_a@epitech.net>
 ## 
 ## Started on  Thu Nov 21 16:37:49 2013 boutel_a
-## Last update Mon Jun  2 11:05:25 2014 richar_2
+## Last update Tue Jun  3 11:52:49 2014 sainto_p
 ##
 
 RM	= rm -f \
@@ -15,7 +15,7 @@ CFLAGS	+= -I./INCLUDE/
 
 CC	= gcc -g $(CFLAGS)
 
-NAME	= rtv1
+NAME	= rt
 
 SOUR	= SRC/
 

@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Mon Jun  2 15:32:08 2014 sainto_p
-** Last update Mon Jun  2 17:06:11 2014 sainto_p
+** Last update Tue Jun  3 11:54:08 2014 sainto_p
 */
 
 #include <math.h>
@@ -28,7 +28,7 @@ float   my_inter_cone(t_coord vec)
                                             / pow(tan(c.angle), 2));
   equa.z = pow(c.x, 2) + pow(c.y, 2) - (pow(c.z, 2)
                                             / pow(tan(c.angle), 2));
-  c.delta = pow(equa.y, 2) - 4 * equa.x * equa.z;
+  c.delta = pow(equa.y, 2) - 4 * equa.x * equa.z; //si tu veux absolument utilise my_check_k return c.delta ici//
   if (c.delta < 0.0)
     return (-1.0);
   c.k[0] = (-equa.y + sqrtf(c.delta)) / (EQUA * equa.x);
