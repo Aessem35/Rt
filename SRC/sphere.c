@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:12 2014 sainto_p
-** Last update Mon Mar 17 02:06:02 2014 sainto_p
+** Last update Wed Jun  4 17:47:54 2014 loteri_a
 */
 
 #include <math.h>
@@ -39,7 +39,7 @@ float	lum_sphere(t_coord vec)
   t_sphere coord;
   t_lum_sphere lum;
   t_fcoord equa;
-  
+
   lum.xspot = 500;
   lum.yspot = 500;
   lum.zspot = 500;
@@ -49,9 +49,9 @@ float	lum_sphere(t_coord vec)
   coord.x = lum.xspot - equa.x;
   coord.y = lum.yspot - equa.y;
   coord.z = lum.zspot - equa.z;
-  lum.cos = equa.x * lum.lx + equa.y * lum.ly + equa.z * lum.lz 
-    / sqrt(pow(equa.x, 2) + pow(equa.y, 2) + pow(equa.z, 2) 
-	   * (pow(lum.lx, 2) + pow(lum.ly, 2) + pow(lum.lz, 2))); 
+  lum.cos = equa.x * lum.lx + equa.y * lum.ly + equa.z * lum.lz
+    / sqrt(pow(equa.x, 2) + pow(equa.y, 2) + pow(equa.z, 2)
+	   * (pow(lum.lx, 2) + pow(lum.ly, 2) + pow(lum.lz, 2)));
   if (lum.cos >= 0.0 && lum.cos <= 1.0)
     {
       c.content[0] = 0 * lum.cos;
