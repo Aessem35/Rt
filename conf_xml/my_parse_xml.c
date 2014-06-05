@@ -5,7 +5,11 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Wed May 28 13:25:31 2014 lair_f
+<<<<<<< HEAD
 ** Last update Thu Jun  5 16:32:17 2014 lair_f
+=======
+** Last update Tue Jun  3 11:56:42 2014 sainto_p
+>>>>>>> 040eff8c5def50702a3365fb957056beb875190c
 */
 
 #include "rt.h"
