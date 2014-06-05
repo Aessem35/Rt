@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:22:35 2014 sainto_p
-** Last update Thu Mar 20 16:50:40 2014 sainto_p
+** Last update Sun Jun  1 15:20:20 2014 sainto_p
 */
 
 #include <math.h>
@@ -49,11 +49,11 @@ float   calc_second_cone(t_coord vec)
   oeil.y = -600.0;
   oeil.z = 0.0;
   equa.x = pow(vec.x, 2) + pow(vec.y, 2) - (pow(vec.z, 2)
-					     / pow(tan(oeil.angle), 2));
+               / pow(tan(oeil.angle), 2));
   equa.y = 2 * (vec.x * oeil.x) + 2 * (vec.y * oeil.y) - 2 * ((vec.z * oeil.z)
-					     / pow(tan(oeil.angle), 2));
+               / pow(tan(oeil.angle), 2));
   equa.z = pow(oeil.x, 2) + pow(oeil.y, 2) - (pow(oeil.z, 2)
-					     / pow(tan(oeil.angle), 2));
+               / pow(tan(oeil.angle), 2));
   oeil.delta = pow(equa.y, 2) - 4 * equa.x * equa.z;
   if (oeil.delta < 0.0)
     return (-1.0);

@@ -5,7 +5,7 @@
 ** Login   <boutel_a@epitech.net>
 ** 
 ** Started on  Tue Feb 25 16:19:33 2014 boutel_a
-** Last update Sun Mar 16 21:43:15 2014 boutel_a
+** Last update Tue Jun  3 13:41:17 2014 sainto_p
 */
 
 #include <math.h>
@@ -13,8 +13,8 @@
 
 float     my_inter_sphere(t_int *h)
 {
-  h->xoeil = -300.0;
-  h->yoeil = 0.0;
+  h->xoeil = -250.0;
+  h->yoeil = 50.0;
   h->zoeil = 0.0;
   h->r = 200.0;
   h->x1 = 100.0;

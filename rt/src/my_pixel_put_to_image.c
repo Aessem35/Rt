@@ -1,11 +1,11 @@
 /*
-** my_pixel_put_to_image.c for rt in /home/sainto_p/rendu/MUL_2013_rtv1/lib
+** my_pixel_put_to_image.c for rt in /home/sainto_p/rendu/MUL_2013_rtv1/src
 ** 
 ** Made by sainto_p
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Fri Mar 14 23:52:10 2014 sainto_p
-** Last update Sun Mar 16 20:44:43 2014 sainto_p
+** Last update Thu Jun  5 15:21:07 2014 sainto_p
 */
 
 #include "rtv1.h"

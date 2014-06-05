@@ -5,18 +5,19 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:25:10 2014 sainto_p
-** Last update Sun Mar 16 20:45:25 2014 sainto_p
+** Last update Thu Jun  5 16:35:56 2014 sainto_p
 */
 
 #include "rtv1.h"
 
 int     rt_loop(t_img *img)
 {
-  int   i;
-  int   j;
   t_color color;
+  int	i;
+  int	j;
 
   i = 0;
+  j = 0;
   color.hexa = 0xFFFFFF;
   while (i < img->width)
     {
@@ -26,7 +27,7 @@ int     rt_loop(t_img *img)
         {
           color.hexa = calc(img, i, j);
           my_pixel_put_to_image(img, i, j, color);
-          j++;
+	  j++;
         }
     }
   return (0);

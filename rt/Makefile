@@ -1,6 +1,6 @@
 CC = 	gcc
 
-NAME =	rtv1
+NAME =	rt
 
 SRCS =	src/main.c \
 	src/my_pixel_put_to_image.c\

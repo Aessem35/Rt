@@ -5,7 +5,7 @@
 ** Login   <boutel_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 13:58:56 2014 boutel_a
-** Last update Mon Jun  2 11:06:36 2014 richar_2
+** Last update Tue Jun  3 13:51:00 2014 sainto_p
 */
 
 #include <stdlib.h>
@@ -46,14 +46,12 @@ int	my_sphere_to_image(t_mlx *p, t_color *c, t_color *cc, t_lum *l)
 {
   t_int	h;
 
-  h.lenght = 1000;
-  h.widht = 1000;
   h.xp = 0;
   h.yp = 0;
   my_put_color(c, 0, 0, 255);
-  while (h.yp <= 1000)
+  while (h.yp <= 1080)
     {
-      while (h.xp <= 1000)
+      while (h.xp <= 1920)
 	{
 	  my_inter_sphere(&h);
       	  my_inter_plan(&h);
@@ -76,7 +74,7 @@ int	gere_key(int keycode, t_void *min)
   return (0);
 }
 
-int	main()
+int	main(int ac, char **av)
 {
   t_color	cc;
   t_color	c;
@@ -84,14 +82,19 @@ int	main()
   t_lum l;
   t_mlx		p;
 
+  if (ac > 1)
+    {
+      printf("Veuillez ne pas rentez d'arguments.\n");
+      return (0);
+    }
   my_put_color(&cc, 255, 0, 0);
   min.mlx_ptr = mlx_init();
   if (min.mlx_ptr == NULL)
     return (0);
-  min.win_ptr = mlx_new_window(min.mlx_ptr, 1000, 1000, "RTV1 Bouteloup");
+  min.win_ptr = mlx_new_window(min.mlx_ptr, 1920, 1080, "RTV1 Bouteloup");
   if (min.win_ptr == NULL)
     return (0);
-  min.img_ptr = mlx_new_image(min.mlx_ptr, 1000, 1000);
+  min.img_ptr = mlx_new_image(min.mlx_ptr, 1920, 1080);
   if (min.img_ptr == NULL)
     return (0);
   p.data = mlx_get_data_addr(min.img_ptr, &p.bpp, &p.sizeline, &p.endian);

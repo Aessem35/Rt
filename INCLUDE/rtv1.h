@@ -5,7 +5,7 @@
 ** Login   <boutel_a@epitech.net>
 ** 
 ** Started on  Wed Feb  5 14:09:53 2014 boutel_a
-** Last update Mon Jun  2 15:49:14 2014 sainto_p
+** Last update Tue Jun  3 13:48:37 2014 sainto_p
 */
 
 
@@ -68,8 +68,8 @@ typedef struct s_fcoord
 
 typedef struct s_int
 {
-  int	widht;
-  int	lenght;
+  float	widht;
+  float	lenght;
   int	xp;
   int	yp;
   float x1;
