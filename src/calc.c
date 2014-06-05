@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:40 2014 sainto_p
-** Last update Thu Jun  5 17:11:37 2014 sainto_p
+** Last update Thu Jun  5 18:43:00 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -13,7 +13,9 @@
 
 int     calc(t_img *img, int i, int j)
 {
+  t_color color;
   t_coord vec;
+  t_sphere oeil;
   float k[5];
 
   vec.x = 100;
@@ -24,8 +26,16 @@ int     calc(t_img *img, int i, int j)
   k[2] = calc_cylinder(vec);
   k[3] = calc_cone(vec);
   k[4] = calc_second_cone(vec);
+  k[5] = lum_sphere(vec, oeil); 
   if (k[0] >= PLAN && ((k[1] >= PLAN && k[0] <= k[1]) || k[1] <= 0))
-    return (0xFF0000);
+    {
+      color.hexa = 0xFF0000;
+      color.content[0] *= k[5];
+      color.content[1] *= k[5];
+      color.content[2] *= k[5];
+      color.content[3] *= k[5];
+      return (color.hexa);
+    }
   else if (k[2] >= PLAN && ((k[1] >= PLAN && k[2] <= k[1]) || k[1] <= PLAN))
     return (0xFFFF00);
   else if (k[3] >= PLAN && ((k[1] >= PLAN && k[3] <= k[1]) || k[1] <= PLAN))

@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:12 2014 sainto_p
-** Last update Thu Jun  5 17:11:51 2014 sainto_p
+** Last update Thu Jun  5 18:41:46 2014 sainto_p
 */
 
 #include <math.h>
@@ -32,10 +32,9 @@ float   calc_sphere(t_coord vec)
   return (oeil.k[1]);
 }
 
-float	lum_sphere(t_coord vec)
+float	lum_sphere(t_coord vec, t_sphere coord)
 {
   t_lum_sphere lum;
-  t_sphere coord;
   t_fcoord equa;
 
   lum.spotx = 500;
@@ -44,9 +43,9 @@ float	lum_sphere(t_coord vec)
   lum.lx = lum.spotx - equa.x;
   lum.ly = lum.spoty - equa.y;
   lum.lz = lum.spotz - equa.z;
-  equa.x = lum.lx + (coord.k[1] * vec.x);
-  equa.y = lum.ly + (coord.k[1] * vec.y);
-  equa.z = lum.lz + (coord.k[1] * vec.z);
+  equa.x = lum.lx + (coord.k[0] * vec.x);
+  equa.y = lum.ly + (coord.k[0] * vec.y);
+  equa.z = lum.lz + (coord.k[0] * vec.z);
     lum.cos = equa.x * lum.lx + equa.y * lum.ly + equa.z * lum.lz
     / sqrt(pow(equa.x, 2) + pow(equa.y, 2) + pow(equa.z, 2)
 	   * (pow(lum.lx, 2) + pow(lum.ly, 2) + pow(lum.lz, 2)));
