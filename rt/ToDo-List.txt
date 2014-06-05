@@ -1,9 +1,0 @@
-- Formes: Cube, Sphere, Plan, Cylindre.
-- Lumieres: Directes, Paralleles, Ombres.
-- Textures
-- Objets Exotiques: Cube troue, Tore, Penrose, Moebius, Klein.
-- Transparence, Reflexions, Brillance.
-- Objets composes et/ou negatifs.
-- Fichier de configuration (en XML si possible).
-- Bump Mapping et Textures Procedurales (si on a le temps).
-- Respecter cette foutu norme.
