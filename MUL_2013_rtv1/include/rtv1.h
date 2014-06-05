@@ -1,11 +1,11 @@
 /*
 ** main.h for  in /home/sainto_p/rendu/MUL_2013_rtv1
-** 
+**
 ** Made by sainto_p
 ** Login   <sainto_p@epitech.net>
-** 
+**
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Mon Mar 24 14:35:59 2014 sainto_p
+** Last update Thu Jun  5 16:02:38 2014 lair_f
 */
 
 #ifndef	RTV1_STRUCT
