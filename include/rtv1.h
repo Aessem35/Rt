@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Thu Jun  5 17:46:05 2014 sainto_p
+** Last update Fri Jun  6 15:18:33 2014 sainto_p
 */
 
 #ifndef	RTV1_STRUCT
@@ -36,6 +36,11 @@ typedef	struct s_equa
   float	y;
   float	z;
 } t_fcoord;
+
+typedef struct s_plan
+{
+  float k;
+} t_plan;
 
 typedef	struct s_sphere
 {
