@@ -14,7 +14,7 @@ SRCS =	src/main.c \
 
 OBJS =	$(SRCS:.c=.o)
 
-CFLAGS	+= -L /usr/X11/lib -lmlx -lXext -lX11 -I /usr/X11/include/
+CFLAGS 	+= -L minilibx/ -lmlx -L /usr/X11/lib -lmlx -lXext -lX11 -I /usr/X11/include/
 CFLAGS	+= -I include/ -lm
 CFLAGS	+= -Wall -Wextra
 
