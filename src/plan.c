@@ -5,15 +5,15 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:23:54 2014 sainto_p
-** Last update Fri Jun  6 15:18:47 2014 sainto_p
+** Last update Fri Jun  6 15:47:40 2014 sainto_p
 */
 
 #include "rtv1.h"
 
 float   calc_plan(t_coord vec)
 {
-  t_plan p;
+  float k;
   
   k = -((0.0 - (-50.0)) / vec.z);
-  return (p.k);
+  return (k);
 }

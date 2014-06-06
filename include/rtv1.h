@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Fri Jun  6 15:18:33 2014 sainto_p
+** Last update Fri Jun  6 15:53:34 2014 sainto_p
 */
 
 #ifndef	RTV1_STRUCT
@@ -36,11 +36,6 @@ typedef	struct s_equa
   float	y;
   float	z;
 } t_fcoord;
-
-typedef struct s_plan
-{
-  float k;
-} t_plan;
 
 typedef	struct s_sphere
 {
@@ -95,8 +90,6 @@ typedef struct	s_lum_sphere
   float	spoty;
   float	spotz;
   float	cos;
-  float	i;
-  float	j;
 } t_lum_sphere;
 
 void    my_pixel_put_to_image(t_img *, int , int , t_color); 
