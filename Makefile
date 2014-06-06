@@ -1,4 +1,4 @@
-CC   = 	gcc
+CC = 	gcc
 
 NAME =	rt
 
@@ -14,10 +14,9 @@ SRCS =	src/main.c \
 
 OBJS =	$(SRCS:.c=.o)
 
-CFLAGS  +=      -Wall -Wextra
-CFLAGS  +=      -I. -I./include/ -lm -I./minilibx
-CFLAGS  +=      -L./minilibx -lmlx
-CFLAGS  +=      -L/usr/lib64/X11 -lXext -lX11
+CFLAGS 	+= -L /usr/X11/lib -lmlx -lXext -lX11 -I /usr/X11/include/
+CFLAGS	+= -I include/ -lm
+CFLAGS	+= -Wall -Wextra
 
 all:	$(NAME)
 
