@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:12 2014 sainto_p
-** Last update Thu Jun  5 18:41:46 2014 sainto_p
+** Last update Fri Jun  6 15:21:31 2014 richar_2
 */
 
 #include <math.h>
@@ -37,7 +37,7 @@ float	lum_sphere(t_coord vec, t_sphere coord)
   t_lum_sphere lum;
   t_fcoord equa;
 
-  lum.spotx = 500;
+  lum.spotx = 250;
   lum.spoty = 500;
   lum.spotz = 500;
   lum.lx = lum.spotx - equa.x;
