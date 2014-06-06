@@ -5,7 +5,7 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Thu Jun  5 14:29:59 2014 lair_f
-** Last update Thu Jun  5 15:39:29 2014 lair_f
+** Last update Fri Jun  6 17:53:07 2014 lair_f
 */
 
 #include "rt.h"
@@ -17,11 +17,11 @@ int	my_nb_words(char *src)
 
   i = 0;
   b = 1;
-  while (src[i] != '\n' && src[i] != ' ' && src[i] != '\t')
+  while (src[i] != '\n' && src[i] != ' ' && src[i] != '\t' && src[i])
     i++;
   while (src[i] != '\n' && src[i])
     {
-      if (src[i] == ' ' || src[i] == ':')
+      if (src[i] == ' ' || src[i] == ':' || src[i] == '=' || src[i] == '/')
 	b++;
       i++;
     }
@@ -41,13 +41,14 @@ char	**my_str_word_tab(char *src, char **tab)
     i++;
   while (src[i] != '\n' && src[i])
     {
-      if (src[i] == ' ' || src[i] == ':')
+      if (src[i] == ' ' || src[i] == ':' || src[i] == '=' || src[i] == '/')
 	{
 	  i++;
 	  x = 0;
 	  y++;
 	}
-      tab[y][x++] = src[i++];
+      if (src[i])
+	tab[y][x++] = src[i++];
     }
   return (tab);
 }
@@ -62,7 +63,6 @@ char	**my_str_to_wordtab(char *src)
   if (!src)
     return (NULL);
   nb = my_nb_words(src);
-  printf("%d\n", nb);
 len = my_strlen(src);
   if ((tab = malloc(sizeof(char *) * (nb + 1))) == NULL)
     return (NULL);

@@ -5,7 +5,7 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Thu Jun  5 16:04:17 2014 lair_f
-** Last update Thu Jun  5 16:30:43 2014 lair_f
+** Last update Fri Jun  6 22:35:23 2014 lair_f
 */
 
 #include "rt.h"
@@ -34,9 +34,9 @@ int	my_put_in_list_camera(t_camera **list, t_init *pt)
   return (EXIT_SUCCESS);
 }
 
-int	my_put_in_list_float(t_float **list, t_init *pt)
+int	my_put_in_list_plan(t_plan **list, t_init *pt)
 {
-  t_float	*elem;
+  t_plan	*elem;
 
   if ((elem = malloc(sizeof(*elem))) == NULL)
     return (intmsg("Error malloc elem\n", EXIT_FAILURE));
