@@ -5,7 +5,7 @@
 ## Login   <ol@epitech.net>
 ## 
 ## Started on  Tue Oct  5 15:56:43 2004 Olivier Crouzet
-## Last update Sun Nov 24 17:45:35 2013 gautie_a
+## Last update Fri Jun  6 16:54:50 2014 richar_2
 ##
 
 
@@ -28,7 +28,7 @@ OBJ	= $(SRC:.c=.o)
 
 TMP	= $(SRC:.c=.c~)
 
-CFLAGS	=-I/usr/X11R6/include -O3
+CFLAGS	=-I. -03
 
 all	: $(NAME)
 

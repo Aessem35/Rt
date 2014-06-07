@@ -12,7 +12,6 @@
 
 typedef struct s_camera
 {
-  char			*name;
   float			x;
   float			y;
   float			z;
@@ -22,19 +21,17 @@ typedef struct s_camera
   struct s_camera	*prev;
 } t_camera;
 
-typedef	struct s_float
+typedef	struct s_plan
 {
-  char			*name;
   float			x;
   float			y;
   float			z;
-  struct s_float	*next;
-  struct s_float	*prev;
-} t_float;
+  struct s_plan		*next;
+  struct s_plan		*prev;
+} t_plan;
 
 typedef	struct s_sphere
 {
-  char			*name;
   float			k[2];
   float			delta;
   float			x;
@@ -46,7 +43,6 @@ typedef	struct s_sphere
 
 typedef	struct	s_cylinder
 {
-  char			*name;
   float			k[2];
   float			delta;
   float			x;
@@ -59,7 +55,6 @@ typedef	struct	s_cylinder
 
 typedef	struct	s_cone
 {
-  char			*name;
   float			k[2];
   float			delta;
   float			x;
@@ -73,7 +68,6 @@ typedef	struct	s_cone
 
 typedef	struct	s_sdcone
 {
-  char			*name;
   float			k[2];
   float			delta;
   float			x;
@@ -104,5 +98,8 @@ void	my_putchar(int, char);
 void	my_putstr(int, char *);
 int	intmsg(char *, int);
 void	my_puttab(int, char **);
+int	my_init_list2(char **, int, t_init *);
+t_init	*my_init_list(char **);
+int	my_put_in_list_camera(t_camera **, t_init *);
 
 #endif /* !RT_H__ */

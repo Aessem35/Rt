@@ -1,5 +1,5 @@
-	<camera x = 3654>
-	  ezg
-	  fa
-	</camera
-	<sphere
+<scene>
+  <camera x=3654 y=2.0 z=42 fov=70/>
+    ezg
+    fa
+  <sphere>

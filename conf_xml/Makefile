@@ -5,7 +5,7 @@
 ## Login   <lair_f@epitech.net>
 ##
 ## Started on  Wed May 28 13:24:12 2014 lair_f
-## Last update Thu Jun  5 16:31:13 2014 lair_f
+## Last update Fri Jun  6 22:37:14 2014 lair_f
 ##
 
 RM	=	rm -f
@@ -17,12 +17,14 @@ SRC	=	my_parse_xml.c \
 		my_puttab.c \
 		my_put_in_list.c \
 		my_put_in_list2.c \
+		my_init_list.c \
+		my_init_list2.c \
 
 NAME	=	xml
 
 OBJ	=	$(SRC:.c=.o)
 
-CFLAGS	=	-I include/ -Wall -Wextra
+CFLAGS	=	-I include/ -Wall -Wextra -g
 
 all:	$(NAME)
 
