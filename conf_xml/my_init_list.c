@@ -5,23 +5,15 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Fri Jun  6 17:12:20 2014 lair_f
-** Last update Fri Jun  6 22:35:55 2014 lair_f
+** Last update Sat Jun  7 15:12:40 2014 lair_f
 */
 
 #include "rt.h"
 
-t_init	*my_init_list(char **buf)
+int	*my_init_list(char **buf, t_init *init)
 {
-  t_init	*init;
   int		y;
 
-  if (!init)
-    {
-      if ((init = malloc(sizeof (init))) == NULL)
-	return (NULL);
-    }
-  else
-    free(init);
   y = -1;
   while (buf[++y])
     {
@@ -39,7 +31,7 @@ t_init	*my_init_list(char **buf)
 	  init->delta = atof(buf[y]);
       y = my_init_list2(buf, y, init);
     }
-  return (init);
+  return (EXIT_SUCCESS);
 }
 
 int	my_init_list2(char **buf, int y, t_init *init)
@@ -61,30 +53,34 @@ int	my_init_list2(char **buf, int y, t_init *init)
 
 int	my_init_camera(char **buf)
 {
-  t_init	*init;
-  t_camera	**camera;
+  t_init	init;
+  t_camera	*camera;
 
-  init = my_init_list(buf);
-  my_put_in_list_camera(camera, init);
+  camera = NULL;
+  my_init_list(buf, &init);;
+  my_put_in_list_camera(&camera, &init);
+  my_show_list(&camera);
   return (EXIT_SUCCESS);
 }
 
 int	my_init_plan(char **buf)
 {
-  t_init	*init;
-  t_plan	**plan;
+  t_init	init;
+  t_plan	*plan;
 
-  init = my_init_list(buf);
-  my_put_in_list_plan(plan, init);
+  plan = NULL;
+  my_init_list(buf, &init);
+  my_put_in_list_plan(&plan, &init);
   return (EXIT_SUCCESS);
 }
 
 int	my_init_sphere(char **buf)
 {
-  t_init	*init;
-  t_sphere	**sphere;
+  t_init	init;
+  t_sphere	*sphere;
 
-  init = my_init_list(buf);
-  my_put_in_list_sphere(sphere, init);
+  sphere = NULL;
+  my_init_list(buf, &init);
+  my_put_in_list_sphere(&sphere, &init);
   return (EXIT_SUCCESS);
 }

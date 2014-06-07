@@ -91,15 +91,30 @@ typedef struct	s_init
   float			lookAtX;
 } t_init;
 
-char	**my_str_to_wordtab(char *);
-int	my_strlen(char *);
-int	my_strcmp(char *, char*);
 void	my_putchar(int, char);
 void	my_putstr(int, char *);
-int	intmsg(char *, int);
 void	my_puttab(int, char **);
+int	my_strlen(char *);
+int	my_strcmp(char *, char*);
+int	intmsg(char *, int);
 int	my_init_list2(char **, int, t_init *);
-t_init	*my_init_list(char **);
 int	my_put_in_list_camera(t_camera **, t_init *);
+char	**my_str_to_wordtab(char *);
+
+int	*my_init_list(char **, t_init *);
+
+int	my_init_camera(char **);
+int	my_init_plan(char **);
+int	my_init_sphere(char **);
+int	my_init_cylinder(char **);
+int	my_init_cone(char **);
+int	my_init_sdcone(char **);
+
+int	my_put_in_list_camera(t_camera **, t_init *);
+int	my_put_in_list_plan(t_plan **, t_init *);
+int	my_put_in_list_sphere(t_sphere **, t_init *);
+int	my_put_in_list_cylinder(t_cylinder **, t_init *);
+int	my_put_in_list_cone(t_cone **, t_init *);
+int	my_put_in_list_sdcone(t_sdcone **, t_init *);
 
 #endif /* !RT_H__ */

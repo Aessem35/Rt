@@ -5,37 +5,40 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Fri Jun  6 22:31:54 2014 lair_f
-** Last update Fri Jun  6 22:37:46 2014 lair_f
+** Last update Sat Jun  7 14:32:42 2014 lair_f
 */
 
 #include "rt.h"
 
 int	my_init_cylinder(char **buf)
 {
-  t_init	*init;
-  t_cylinder	**cylinder;
+  t_init	init;
+  t_cylinder	*cylinder;
 
-  init = my_init_list(buf);
-  my_put_in_list_cylinder(cylinder, init);
+  cylinder = NULL;
+  my_init_list(buf, &init);
+  my_put_in_list_cylinder(&cylinder, &init);
   return (EXIT_SUCCESS);
 }
 
 int	my_init_cone(char **buf)
 {
-  t_init	*init;
-  t_cone	**cone;
+  t_init	init;
+  t_cone	*cone;
 
-  init = my_init_list(buf);
-  my_put_in_list_cone(cone, init);
+  cone = NULL;
+  my_init_list(buf, &init);
+  my_put_in_list_cone(&cone, &init);
   return (EXIT_SUCCESS);
 }
 
 int	my_init_sdcone(char **buf)
 {
-  t_init	*init;
-  t_sdcone	**sdcone;
+  t_init	init;
+  t_sdcone	*sdcone;
 
-  init = my_init_list(buf);
-  my_put_in_list_sdcone(sdcone, init);
+  sdcone = NULL;
+  my_init_list(buf, &init);
+  my_put_in_list_sdcone(&sdcone, &init);
   return (EXIT_SUCCESS);
 }
