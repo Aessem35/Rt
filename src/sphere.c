@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Fri Jun  6 19:32:20 2014 sainto_p
-** Last update Sat Jun  7 15:33:36 2014 sainto_p
+** Last update Sat Jun  7 17:32:42 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -51,6 +51,6 @@ float	lum_sphere(t_coord vec, t_sphere oeil)
 		   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
   if (lum.cos < 0.1)
     lum.cos = 0.1;
-  if (lum.cos >= 0.1 && lum.cos <= 1)
+  if (lum.cos >= 0.1 && lum.cos <= 1.0)
     return (lum.cos);
 }

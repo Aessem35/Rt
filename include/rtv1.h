@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Sat Jun  7 14:19:51 2014 sainto_p
+** Last update Sat Jun  7 16:24:16 2014 sainto_p
 */
 
 #ifndef	RTV1_STRUCT
@@ -67,6 +67,14 @@ typedef	struct	s_cone
   float	rayon;
 } t_cone;
 
+typedef struct s_plan
+{
+  float	k;
+  float	x;
+  float	y;
+  float	z;
+} t_plan;
+
 typedef	struct	s_sdcone
 {
   float	k[2];
@@ -99,6 +107,7 @@ float   lum_sphere(t_coord , t_sphere);
 float   calc_cylinder(t_coord );
 float   calc_plan(t_coord );
 float   calc_sphere(t_coord );
+float	lum_plan(t_coord , t_plan );
 int     calc(t_img *, int, int);
 int     rt_loop(t_img *);
 int     my_key_hook(int, void *);
