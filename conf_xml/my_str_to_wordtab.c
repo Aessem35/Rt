@@ -5,7 +5,7 @@
 ** Login   <lair_f@epitech.net>
 **
 ** Started on  Thu Jun  5 14:29:59 2014 lair_f
-** Last update Fri Jun  6 17:53:07 2014 lair_f
+** Last update Sat Jun  7 17:13:09 2014 lair_f
 */
 
 #include "rt.h"
@@ -21,7 +21,7 @@ int	my_nb_words(char *src)
     i++;
   while (src[i] != '\n' && src[i])
     {
-      if (src[i] == ' ' || src[i] == ':' || src[i] == '=' || src[i] == '/')
+      if (src[i] == ' ' || src[i] == '=')
 	b++;
       i++;
     }
@@ -41,8 +41,9 @@ char	**my_str_word_tab(char *src, char **tab)
     i++;
   while (src[i] != '\n' && src[i])
     {
-      if (src[i] == ' ' || src[i] == ':' || src[i] == '=' || src[i] == '/')
+      if (src[i] == ' ' || src[i] == '=')
 	{
+	  tab[y][x] = '\0';
 	  i++;
 	  x = 0;
 	  y++;

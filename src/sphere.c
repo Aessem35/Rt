@@ -1,17 +1,14 @@
 /*
-** sphere.c for  in /home/sainto_p/rendu/MUL_2013_rtv1/src
+** sphere.c for  in /home/sainto_p/rendu/MUL_2013_rt/Rt/src
 ** 
 ** Made by sainto_p
 ** Login   <sainto_p@epitech.net>
 ** 
-** Started on  Sun Mar 16 19:24:12 2014 sainto_p
-<<<<<<< HEAD
-** Last update Fri Jun  6 16:26:06 2014 sainto_p
-=======
-** Last update Fri Jun  6 15:37:47 2014 richar_2
->>>>>>> c165e037ba4026d381e2bcf05cae7741f0cc4abb
+** Started on  Fri Jun  6 19:32:20 2014 sainto_p
+** Last update Sat Jun  7 15:33:36 2014 sainto_p
 */
 
+#include <stdio.h>
 #include <math.h>
 #include "rtv1.h"
 
@@ -36,26 +33,6 @@ float   calc_sphere(t_coord vec)
   return (oeil.k[1]);
 }
 
-/* float	lum_sphere(t_coord vec, t_sphere coord) */
-/* { */
-/*   t_lum_sphere lum; */
-/*   t_fcoord equa; */
-
-/*   lum.spotx = 500; */
-/*   lum.spoty = 500; */
-/*   lum.spotz = 500; */
-/*   lum.lx = lum.spotx - equa.x; */
-/*   lum.ly = lum.spoty - equa.y; */
-/*   lum.lz = lum.spotz - equa.z; */
-/*   equa.x = lum.lx + (coord.k[0] * vec.x); */
-/*   equa.y = lum.ly + (coord.k[0] * vec.y); */
-/*   equa.z = lum.lz + (coord.k[0] * vec.z); */
-/*     lum.cos = equa.x * lum.lx + equa.y * lum.ly + equa.z * lum.lz */
-/*     / sqrt(pow(equa.x, 2) + pow(equa.y, 2) + pow(equa.z, 2) */
-/* 	   * (pow(lum.lx, 2) + pow(lum.ly, 2) + pow(lum.lz, 2))); */
-/*   return (lum.cos); */
-/* } */
-
 float	lum_sphere(t_coord vec, t_sphere oeil)
 {
   t_lum_sphere lum;
@@ -74,6 +51,6 @@ float	lum_sphere(t_coord vec, t_sphere oeil)
 		   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
   if (lum.cos < 0.1)
     lum.cos = 0.1;
-  if (lum.cos >= 0 && lum.cos <= 1)
+  if (lum.cos >= 0.1 && lum.cos <= 1)
     return (lum.cos);
 }
