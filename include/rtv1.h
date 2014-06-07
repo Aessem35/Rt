@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Fri Jun  6 15:53:34 2014 sainto_p
+** Last update Sat Jun  7 14:12:32 2014 sainto_p
 */
 
 #ifndef	RTV1_STRUCT
@@ -89,13 +89,13 @@ typedef struct	s_lum_sphere
   float	spotx;
   float	spoty;
   float	spotz;
-  float	cos;
+  int	cos;
 } t_lum_sphere;
 
-void    my_pixel_put_to_image(t_img *, int , int , t_color); 
+void    my_pixel_put_to_image(t_img *, int , int , t_color, t_lum_sphere); 
 float	calc_cone(t_coord );
 float	calc_second_cone(t_coord );
-float   lum_sphere(t_coord , t_sphere);
+int   lum_sphere(t_coord , t_sphere);
 float   calc_cylinder(t_coord );
 float   calc_plan(t_coord );
 float   calc_sphere(t_coord );
