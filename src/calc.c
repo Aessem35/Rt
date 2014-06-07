@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:40 2014 sainto_p
-** Last update Sat Jun  7 15:32:30 2014 sainto_p
+** Last update Sat Jun  7 15:42:59 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -36,7 +36,7 @@ int	calc(t_img *img, int i, int j)
       color.content[2] *= cos;
       return (color.hexa);
     }
-  if (k[2] >= PLAN && ((k[1] >= PLAN && k[2] <= k[1]) || k[1] <= PLAN))
+  else if (k[2] >= PLAN && ((k[1] >= PLAN && k[2] <= k[1]) || k[1] <= PLAN))
     {
       color.hexa = 0xFFFF00;
       color.content[0] *= cos;
