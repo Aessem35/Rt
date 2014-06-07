@@ -5,14 +5,13 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:25:10 2014 sainto_p
-** Last update Sat Jun  7 14:13:10 2014 sainto_p
+** Last update Sat Jun  7 14:18:51 2014 sainto_p
 */
 
 #include "rtv1.h"
 
 int     rt_loop(t_img *img)
 {
-  t_lum_sphere oeil;
   t_color color;
   int	i;
   int	j;
@@ -27,7 +26,7 @@ int     rt_loop(t_img *img)
       while (j < img->height)
         {
           color.hexa = calc(img, i, j);
-	  my_pixel_put_to_image(img, i, j, color, oeil);
+	  my_pixel_put_to_image(img, i, j, color);
 	  j++;
         }
     }

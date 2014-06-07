@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Fri Mar 14 23:52:10 2014 sainto_p
-** Last update Sat Jun  7 14:12:12 2014 sainto_p
+** Last update Sat Jun  7 15:25:22 2014 sainto_p
 */
 
 #include "rtv1.h"
@@ -45,22 +45,19 @@
 /*   i = 0; */
 /*   img->data[y * img->size_line + x * 4 + i] = color.r; */
 /*   img->data[y * img->size_line + x * 4 + i + 1] = color.g; */
-/*   img->data[y * img->size_line + x * 4 + i + 2] = color.b; */
-  
+/*   img->data[y * img->size_line + x * 4 + i + 2] = color.b; */  
 /* } */
 
-void    my_pixel_put_to_image(t_img *img, int x, int y, t_color color, t_lum_sphere c)
+void    my_pixel_put_to_image(t_img *img, int x, int y, t_color color)
 {
   int   i;
-  int	cos;
 
   if (x < 0 || y < 0 || x >= img->width || y >= img->height)
     return ;
   i = 0;
   while (i < 4)
     {
-      img->data[y * img->size_line + x * 4 + i] = color.content[i] * c.cos;
+      img->data[y * img->size_line + x * 4 + i] = color.content[i];
       ++i;
     }
 }
-

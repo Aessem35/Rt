@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Fri Jun  6 19:32:20 2014 sainto_p
-** Last update Sat Jun  7 14:06:11 2014 sainto_p
+** Last update Sat Jun  7 15:33:36 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -33,7 +33,7 @@ float   calc_sphere(t_coord vec)
   return (oeil.k[1]);
 }
 
-int	lum_sphere(t_coord vec, t_sphere oeil)
+float	lum_sphere(t_coord vec, t_sphere oeil)
 {
   t_lum_sphere lum;
 
@@ -52,8 +52,5 @@ int	lum_sphere(t_coord vec, t_sphere oeil)
   if (lum.cos < 0.1)
     lum.cos = 0.1;
   if (lum.cos >= 0.1 && lum.cos <= 1)
-    {
-      printf("%d\n", lum.cos);
-      return (lum.cos);
-    }
+    return (lum.cos);
 }
