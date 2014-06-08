@@ -12,20 +12,21 @@ SRCS =	src/main.c \
 	src/gere_key.c \
 	src/calc.c
 
-OBJS =	$(SRCS:.c=.o)
 
-CFLAGS	+= -L /usr/X11/lib -lmlx -lXext -lX11 -I /usr/X11/include/
-CFLAGS	+= -I include/ -lm
-CFLAGS	+= -Wall -Wextra
+OBJS = 	$(SRCS:.c=.o)
 
-all:	$(NAME)
+CFLAGS += -Wall -Wextra
+CFLAGS += -L./minilibx/ -lmlx -lX11 -lXext -lm
+CFLAGS += -I./include/ -I./minilibx/
+
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	cc -o $(NAME) $(OBJS) $(CFLAGS)
 clean:
 	$(RM) $(OBJS)
 
-fclean:	clean
+fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
