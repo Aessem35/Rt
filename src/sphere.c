@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Fri Jun  6 19:32:20 2014 sainto_p
-** Last update Sun Jun  8 14:03:45 2014 sainto_p
+** Last update Sun Jun  8 14:39:00 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -48,7 +48,8 @@ float	lum_sphere(t_coord vec, t_sphere oeil)
   lum.zlum = (lum.spotz - lum.lz);
   lum.cos = (((lum.lx * lum.xlum) + (lum.ly * lum.ylum) + (lum.lz * lum.zlum)) /
 	     (sqrt((pow(lum.lx, 2.0) + pow(lum.ly, 2.0) + pow(lum.lz, 2.0)) *
-		   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
+		   (pow(lum.xlum, 2.0) +
+		    pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
   if (lum.cos < 0.1)
     lum.cos = 0.1;
   if (lum.cos >= 0.1 && lum.cos <= 1.0)
