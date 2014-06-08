@@ -5,10 +5,10 @@
 ## Login   <sainto_p@epitech.net>
 ## 
 ## Started on  Sun Jun  8 14:09:13 2014 sainto_p
-## Last update Sun Jun  8 14:09:15 2014 sainto_p
+## Last update Sun Jun  8 17:59:24 2014 sainto_p
 ##
 
-CC = 	gcc
+CC = 	gcc -g3
 
 NAME =	rt
 
