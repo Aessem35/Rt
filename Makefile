@@ -1,3 +1,13 @@
+##
+## Makefile for  in /home/sainto_p/rendu/MUL_2013_rt/Rt
+## 
+## Made by sainto_p
+## Login   <sainto_p@epitech.net>
+## 
+## Started on  Sun Jun  8 14:09:13 2014 sainto_p
+## Last update Sun Jun  8 14:09:15 2014 sainto_p
+##
+
 CC = 	gcc
 
 NAME =	rt
@@ -12,20 +22,21 @@ SRCS =	src/main.c \
 	src/gere_key.c \
 	src/calc.c
 
-OBJS =	$(SRCS:.c=.o)
 
-CFLAGS	+= -L /usr/X11/lib -lmlx -lXext -lX11 -I /usr/X11/include/
-CFLAGS	+= -I include/ -lm
-CFLAGS	+= -Wall -Wextra
+OBJS = 	$(SRCS:.c=.o)
 
-all:	$(NAME)
+CFLAGS += -Wall -Wextra
+CFLAGS += -L./minilibx/ -lmlx -lX11 -lXext -lm
+CFLAGS += -I./include/ -I./minilibx/
+
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	cc -o $(NAME) $(OBJS) $(CFLAGS)
 clean:
 	$(RM) $(OBJS)
 
-fclean:	clean
+fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
