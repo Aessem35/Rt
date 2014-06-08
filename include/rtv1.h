@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Sat Jun  7 16:24:16 2014 sainto_p
+** Last update Sun Jun  8 13:52:04 2014 sainto_p
 */
 
 #ifndef	RTV1_STRUCT
@@ -25,9 +25,9 @@ typedef union u_color
 
 typedef struct s_vec
 {
-  int	x;
-  int	y;
-  int	z;
+  float	x;
+  float	y;
+  float	z;
 } t_coord;
 
 typedef	struct s_equa
@@ -100,6 +100,35 @@ typedef struct	s_lum_sphere
   float cos;
 } t_lum_sphere;
 
+typedef struct  s_lum_cylinder
+{
+  float xlum;
+  float ylum;
+  float zlum;
+  float lx;
+  float ly;
+  float lz;
+  float spotx;
+  float spoty;
+  float spotz;
+  float cos;
+} t_lum_cylinder;
+
+typedef struct  s_lum_cone
+{
+  float xlum;
+  float ylum;
+  float zlum;
+  float lx;
+  float ly;
+  float lz;
+  float spotx;
+  float spoty;
+  float spotz;
+  float cos;
+} t_lum_cone;
+
+float	lum_cylinder(t_coord vec, t_cylinder oeil);
 void    my_pixel_put_to_image(t_img *, int , int , t_color ); 
 float	calc_cone(t_coord );
 float	calc_second_cone(t_coord );
