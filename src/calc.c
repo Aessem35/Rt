@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:24:40 2014 sainto_p
-** Last update Sat Jun  7 17:59:14 2014 boutel_a
+** Last update Sun Jun  8 14:01:10 2014 boutel_a
 */
 
 #include <stdio.h>
@@ -63,7 +63,7 @@ int	calc(t_img *img, int i, int j)
   vec.y = (img->width / 2) - i;
   vec.z = (img->height / 2) - j;
   k[0] = calc_sphere(vec);
-  k[1] = calc_plan(vec);
+  //  k[1] = calc_plan(vec);
   k[2] = calc_cylinder(vec);
   k[3] = calc_cone(vec);
   k[4] = calc_second_cone(vec);
@@ -77,8 +77,8 @@ int	calc(t_img *img, int i, int j)
     return (result = my_lum_color_cone(color, cos));
   else if (k[4] >= PLAN && ((k[1] >= PLAN && k[4] <= k[1]) || k[1] <= PLAN))
   return (result = my_lum_color_cone(color, cos));
-  else if (k[1] > PLAN)
-    return (result = my_lum_color_plan(color, cos2));
+  // else if (k[1] > PLAN)
+  //return (result = my_lum_color_plan(color, cos2));
   return (0);
 }
 
