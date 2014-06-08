@@ -5,7 +5,11 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:23:20 2014 sainto_p
+<<<<<<< HEAD
 ** Last update Sun Jun  8 11:51:36 2014 richar_2
+=======
+** Last update Sun Jun  8 13:59:51 2014 sainto_p
+>>>>>>> c920bc7e28b1c92605affb9e04d19750fafb43d4
 */
 
 #include <math.h>

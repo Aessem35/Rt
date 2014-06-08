@@ -1,3 +1,13 @@
+##
+## Makefile for  in /home/sainto_p/rendu/MUL_2013_rt/Rt
+## 
+## Made by sainto_p
+## Login   <sainto_p@epitech.net>
+## 
+## Started on  Sun Jun  8 14:09:13 2014 sainto_p
+## Last update Sun Jun  8 14:09:15 2014 sainto_p
+##
+
 CC = 	gcc
 
 NAME =	rt
