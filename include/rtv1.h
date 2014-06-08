@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Sun Jun  8 21:04:15 2014 sainto_p
+** Last update Sun Jun  8 22:58:06 2014 boutel_a
 */
 
 #ifndef	RTV1_STRUCT
@@ -121,6 +121,25 @@ typedef struct  s_lum_cone
   float cos;
 } t_lum_cone;
 
+typedef struct s_cos_lum
+{
+  float cos_sphere;
+  float cos_plan;
+  float cos_cylinder;
+  float cos_cone;
+  float result;
+} t_cos_lum;
+
+typedef struct s_all
+{
+  t_sphere sphere;
+  t_color color;
+  t_plan plan;
+  t_cylinder cylinder;
+  t_cone cone;
+  t_coord vec;
+} t_all;
+
 int     my_key_hook(int, void *);
 int	gere_expose(t_img *, void *, void *);
 int     rt_loop(t_img *);
@@ -133,5 +152,6 @@ float   calc_sphere(t_coord , t_sphere *);
 float	lum_plan(t_coord , t_plan *);
 float   lum_sphere(t_coord , t_sphere *);
 float	lum_cylinder(t_coord , t_cylinder *);
+float	lum_cone(t_coord , t_cone *);
 
 #endif
