@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:23:54 2014 sainto_p
-** Last update Sun Jun  8 20:36:24 2014 sainto_p
+** Last update Sun Jun  8 23:28:40 2014 sainto_p
 */
 
 #include <math.h>
@@ -26,9 +26,9 @@ float   lum_plan(t_coord vec, t_plan *oeil)
 {
   t_lum_sphere lum;
 
-  lum.spotx = -400.0;
-  lum.spoty = 200.0;
-  lum.spotz = 50.0;
+  lum.spotx = SPOTX;
+  lum.spoty = SPOTY;
+  lum.spotz = SPOTZ;
   lum.lx = CAMX + (oeil->k * vec.x);
   lum.ly = CAMY + (oeil->k * vec.y);
   lum.lz = CAMZ + (oeil->k * vec.z);
@@ -37,9 +37,11 @@ float   lum_plan(t_coord vec, t_plan *oeil)
   lum.zlum = (lum.spotz - lum.lz);
   lum.cos = (((0.0 * lum.xlum) + (0.0 * lum.ylum) + (100.0 * lum.zlum)) /
              (sqrt((pow(0.0, 2.0) + pow(0.0, 2.0) + pow(100.0, 2.0)) *
-                   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
+                   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0)
+		    + pow(lum.zlum, 2.0)))));
   if (lum.cos < 0.1)
     lum.cos = 0.1;
   if (lum.cos >= 0.1 && lum.cos <= 1)
     return (lum.cos);
+  return (0.0);
 }

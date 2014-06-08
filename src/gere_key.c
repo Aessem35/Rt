@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:25:34 2014 sainto_p
-** Last update Wed Jun  4 18:41:39 2014 sainto_p
+** Last update Sun Jun  8 23:30:46 2014 sainto_p
 */
 
 #include <stdio.h>
@@ -16,7 +16,7 @@ int     my_key_hook(int keycode, void *param)
 {
   if (keycode == ECHAP)
     {
-      printf("You ask to quit this program, By!\n");
+      printf("You ask to quit this program!\n");
       free(param);
       exit(EXIT_SUCCESS);
     }

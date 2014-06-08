@@ -5,7 +5,7 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Sun Mar 16 19:23:20 2014 sainto_p
-** Last update Sun Jun  8 21:01:48 2014 sainto_p
+** Last update Sun Jun  8 23:26:50 2014 sainto_p
 */
 
 #include <math.h>
@@ -35,20 +35,22 @@ float   lum_cylinder(t_coord vec, t_cylinder *oeil)
 {
   t_lum_cylinder lum;
 
-  lum.spotx = -400.0;
-  lum.spoty = 200.0;
-  lum.spotz = 50.0;
+  lum.spotx = SPOTX;
+  lum.spoty = SPOTY;
+  lum.spotz = SPOTZ;
   lum.lx = CAMX + (oeil->k[0] * vec.x);
   lum.ly = CAMY + (oeil->k[0] * vec.y);
   lum.lz = CAMZ + (oeil->k[0] * vec.z);
   lum.xlum = (lum.spotx - lum.lx);
   lum.ylum = (lum.spoty - lum.ly);
   lum.zlum = (lum.spotz - lum.lz);
-  lum.cos = (((lum.lx * lum.xlum) + (lum.ly * lum.ylum) + (0.0 * lum.zlum)) /
-             (sqrt((pow(lum.lx, 2.0) + pow(lum.ly, 2.0) + pow(0.0, 2.0)) *
-                   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0) + pow(lum.zlum, 2.0)))));
+  lum.cos = (((lum.lx * lum.xlum) + (lum.ly * lum.ylum) + (10.0 * lum.zlum)) /
+             (sqrt((pow(lum.lx, 2.0) + pow(lum.ly, 2.0) + pow(10.0, 2.0)) *
+                   (pow(lum.xlum, 2.0) + pow(lum.ylum, 2.0)
+		    + pow(lum.zlum, 2.0)))));
   if (lum.cos < 0.1)
     lum.cos = 0.1;
   if (lum.cos >= 0.1 && lum.cos <= 1)
     return (lum.cos);
+  return (0.0);
 }

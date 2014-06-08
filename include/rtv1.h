@@ -5,13 +5,17 @@
 ** Login   <sainto_p@epitech.net>
 ** 
 ** Started on  Thu Feb 27 16:31:41 2014 sainto_p
-** Last update Sun Jun  8 22:58:06 2014 boutel_a
+** Last update Sun Jun  8 23:29:16 2014 sainto_p
 */
 
-#ifndef	RTV1_STRUCT
-#define RTV1_STRUCT
+#ifndef	RTV1__STRUCT__
+#define RTV1__STRUCT__
 
 #include "mlx_int.h"
+
+#define SPOTX -400.0
+#define SPOTY 200.0
+#define SPOTZ 50.0
 
 #define CAMX -300.0
 #define CAMY 0.0
@@ -141,17 +145,25 @@ typedef struct s_all
 } t_all;
 
 int     my_key_hook(int, void *);
-int	gere_expose(t_img *, void *, void *);
+int     gere_expose(t_img *, void *, void *);
+
 int     rt_loop(t_img *);
-void    my_pixel_put_to_image(t_img *, int , int , t_color ); 
+void    my_pixel_put_to_image(t_img *, int , int , t_color);
 int     calc(t_img *, int, int);
-float	calc_cone(t_coord );
+
+float   calc_cone(t_coord , t_cone *);
 float   calc_cylinder(t_coord , t_cylinder *);
 float   calc_plan(t_coord , t_plan *);
 float   calc_sphere(t_coord , t_sphere *);
-float	lum_plan(t_coord , t_plan *);
+
+float   lum_plan(t_coord , t_plan *);
 float   lum_sphere(t_coord , t_sphere *);
-float	lum_cylinder(t_coord , t_cylinder *);
-float	lum_cone(t_coord , t_cone *);
+float   lum_cylinder(t_coord , t_cylinder *);
+float   lum_cone(t_coord , t_cone *);
+
+int     my_lum_color_sphere(t_color , float);
+int     my_lum_color_cylinder(t_color , float);
+int     my_lum_color_cone(t_color , float);
+int     my_lum_color_plan(t_color , float);
 
 #endif
